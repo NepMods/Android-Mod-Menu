@@ -11,6 +11,7 @@
 #include <dlfcn.h>
 #include "Includes/Logger.h"
 #include "Includes/obfuscate.h"
+#include "utils/App.h"
 #include "Includes/Utils.h"
 #include "KittyMemory/MemoryPatch.h"
 #include "Menu/Setup.h"
@@ -143,7 +144,8 @@ void *hack_thread(void *) {
 
 jobjectArray GetFeatureList(JNIEnv *env, jobject context) {
     jobjectArray ret;
-
+App.env = env;
+           App.obj = obj;
     const char *features[] = {
             OBFUSCATE("Category_The Category"), //Not counted
             OBFUSCATE("Toggle_The toggle"),
