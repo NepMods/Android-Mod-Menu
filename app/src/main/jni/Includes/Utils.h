@@ -192,5 +192,16 @@ namespace ToastLength {
     inline const int LENGTH_LONG = 1;
     inline const int LENGTH_SHORT = 0;
 }
-
+void ShowToast(const char *text, int length) {
+    T(App.env, App.obj, text, length);
+}
+void ShowDialog(const char *text, const char *MSG) {
+    D(App.obj, App.env, text, MSG);
+}
+void ShowDialog(const char *text, const char *MSG, const char *Ok, const char *Cancel, bool Close ) {
+    DFull(App.obj, App.env, text, MSG, Ok, Cancel, Close);
+}
+void CheckPermission(const char *text){
+    CP(App.env, App.obj, text);
+}
 #endif
