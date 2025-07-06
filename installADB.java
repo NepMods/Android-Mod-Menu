@@ -13,7 +13,7 @@ public class installADB {
         File apkFile = new File(apkPath);
 
         if (!apkFile.exists()) {
-            System.err.println("❌ APK not found at: " + apkFile.getAbsolutePath());
+            System.err.println("APK not found at: " + apkFile.getAbsolutePath());
             return;
         }
         String command = "\"" + ADB_PATH + "\" install -r \"" + apkFile.getAbsolutePath() + "\"";
