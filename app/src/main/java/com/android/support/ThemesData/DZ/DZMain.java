@@ -9,12 +9,15 @@ public class DZMain {
 
     public DZMain(Context context, DZShared shared) {
         this.shared = shared;
+
         // Only run if DZ theme is enabled
         if (BuildConfig.INCLUDE_THEME_DZ) {
-        this.shared.MenuStyle = new DZStyle();
-        this.shared.getContext = context;
-        this.shared.components = new DZMenuComponents(shared);
-        this.shared.menu = new DZMenu(shared);
+            try {
+                Class<?> clazz = Class.forName("com.android.support.ThemesData.DZ.DZInitializer");
+                clazz.getMethod("initialize", Context.class, DZShared.class).invoke(null, context, shared);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

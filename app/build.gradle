@@ -13,8 +13,8 @@ android {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
         // here i excluded theme azl and DZ 
-        buildConfigField "boolean", "INCLUDE_THEME_AZL", INCLUDE_THEME_AZL.toString()
-        buildConfigField "boolean", "INCLUDE_THEME_DZ", INCLUDE_THEME_DZ.toString()
+        buildConfigField "boolean", "INCLUDE_THEME_AZL", "false"
+        buildConfigField "boolean", "INCLUDE_THEME_DZ", "false"
 
     }
     buildTypes {
@@ -38,4 +38,11 @@ android {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+gradle.projectsEvaluated {
+    def manualBuildConfig = file("src/main/java/com/android/support/BuildConfig.java")
+    if (manualBuildConfig.exists()) {
+        println "Deleting manual BuildConfig.java for Gradle build"
+        manualBuildConfig.delete()
+    }
 }
