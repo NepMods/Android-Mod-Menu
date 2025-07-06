@@ -13,7 +13,7 @@ import com.android.support.ThemesData.LGL.LGLTheme;
 import com.android.support.base.FloatingWindowManager;
 import com.android.support.interfaces.IMenuData;
 
-public class Menu extends DZTheme {
+public class Menu extends LGLTheme {
     native void Init(Context context, TextView title, TextView subTitle);
 
     native String Icon();
