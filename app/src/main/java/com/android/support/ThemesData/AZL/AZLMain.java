@@ -5,12 +5,10 @@ import com.android.support.interfaces.IMenuData;
 import com.android.support.BuildConfig;
 
 public class AZLMain {
-
     AZLShared shared;
 
     public AZLMain(Context context, AZLShared shared) {
         this.shared = shared;
-
         // Only run if AZL theme is enabled
         if (BuildConfig.INCLUDE_THEME_AZL) {
             this.shared.MenuStyle = new AZLStyle();
