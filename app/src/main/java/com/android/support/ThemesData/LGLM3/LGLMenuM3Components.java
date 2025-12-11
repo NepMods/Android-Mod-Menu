@@ -292,7 +292,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 Preferences.changeFeatureInt(spinner.getSelectedItem().toString(), featNum, position);
-                ((MaterialTextView) parentView.getChildAt(0)).setTextColor(sharedData.MenuStyle.getTextColor2());
+                ((TextView) parentView.getChildAt(0)).setTextColor(sharedData.MenuStyle.getTextColor2());
             }
 
             @Override
