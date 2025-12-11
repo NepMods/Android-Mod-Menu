@@ -35,7 +35,7 @@ import android.widget.Switch;
 import com.google.android.material.button.MaterialButton;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
-import com.google.android.material.textview.MaterialTextView;
+import android.widget.TextView;
 
 import com.android.support.Preferences;
 import com.android.support.interfaces.IMenuComponentFactory;
@@ -611,7 +611,8 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         //Credit: LoraZalora
         final List<String> lists = new LinkedList<>(Arrays.asList(list.split(",")));
 
-        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
+        final TextView textView = new
+        TextView(sharedData.getContext);
         textView.setText(featName + ":");
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
 
@@ -670,7 +671,8 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         collapseSub.setVisibility(View.GONE);
         sharedData.mCollapse = collapseSub;
 
-        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
+        final TextView textView = new 
+TextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCollapseColor());
         textView.setText("▽ " + text + " ▽");
         textView.setGravity(Gravity.CENTER);
@@ -712,7 +714,8 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void Category(LinearLayout linLayout, String text) {
-        MaterialTextView textView = new MaterialTextView(sharedData.getContext);
+        TextView textView = new
+TextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCategoryBG());
         textView.setText(Html.fromHtml(text));
         textView.setGravity(Gravity.CENTER);
@@ -728,7 +731,8 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void TextView(LinearLayout linLayout, String text) {
-        MaterialTextView textView = new MaterialTextView(sharedData.getContext);
+        TextView textView = new
+TextView(sharedData.getContext);
         textView.setText(Html.fromHtml(text));
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
         textView.setPadding(10, 5, 10, 5);
