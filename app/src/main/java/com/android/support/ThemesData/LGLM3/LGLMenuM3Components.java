@@ -672,7 +672,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         sharedData.mCollapse = collapseSub;
 
         final TextView textView = new 
-TextView(sharedData.getContext);
+        TextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCollapseColor());
         textView.setText("▽ " + text + " ▽");
         textView.setGravity(Gravity.CENTER);
@@ -715,7 +715,7 @@ TextView(sharedData.getContext);
     @Override
     public void Category(LinearLayout linLayout, String text) {
         TextView textView = new
-TextView(sharedData.getContext);
+        TextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCategoryBG());
         textView.setText(Html.fromHtml(text));
         textView.setGravity(Gravity.CENTER);
@@ -732,7 +732,7 @@ TextView(sharedData.getContext);
     @Override
     public void TextView(LinearLayout linLayout, String text) {
         TextView textView = new
-TextView(sharedData.getContext);
+        TextView(sharedData.getContext);
         textView.setText(Html.fromHtml(text));
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
         textView.setPadding(10, 5, 10, 5);
