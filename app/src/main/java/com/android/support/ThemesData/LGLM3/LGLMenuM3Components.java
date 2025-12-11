@@ -43,9 +43,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LGLMenuComponents implements IMenuComponentFactory {
-    LGLShared sharedData;
-    LGLMenuComponents(LGLShared shared) {
+public class LGLMenuM3Components implements IMenuComponentFactory {
+    LGLSharedM3 sharedData;
+    LGLMenuM3Components(LGLSharedM3 shared) {
         sharedData = shared;
     }
 
