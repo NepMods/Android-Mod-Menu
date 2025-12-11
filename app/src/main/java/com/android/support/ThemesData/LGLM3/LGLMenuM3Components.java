@@ -119,7 +119,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setGravity(Gravity.CENTER);
 
-        final TextView textView = new TextView(sharedData.getContext);
+        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
         textView.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + ((loadedProg == 0) ? min : loadedProg)));
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
 
@@ -158,7 +158,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void Button(LinearLayout linLayout, final int featNum, final String featName) {
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
         button.setLayoutParams(layoutParams);
@@ -193,7 +193,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void ButtonLink(LinearLayout linLayout, final String featName, final String url) {
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
         button.setLayoutParams(layoutParams);
@@ -220,7 +220,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void ButtonOnOff(LinearLayout linLayout, final int featNum, final String featName, final boolean switchedOn) {
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
         button.setLayoutParams(layoutParams);
@@ -315,7 +315,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
 
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
         int num = Preferences.loadPrefInt(featName, featNum);
         button.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + num + "</font>"));
         button.setAllCaps(false);
@@ -410,7 +410,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
 
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
         long num = Preferences.loadPrefLong(featName, featNum);
         button.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + num + "</font>"));
         button.setAllCaps(false);
@@ -505,7 +505,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
         layoutParams.setMargins(7, 5, 7, 5);
 
-        final Button button = new Button(sharedData.getContext);
+        final MaterialButton button = new MaterialButton(sharedData.getContext);
 
         String string = Preferences.loadPrefString(featName, featNum);
         button.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + string + "</font>"));
@@ -581,7 +581,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void CheckBox(LinearLayout linLayout, final int featNum, final String featName, boolean switchedOn) {
-        final CheckBox checkBox = new CheckBox(sharedData.getContext);
+        final MaterialCheckBox checkBox = new MaterialCheckBox(sharedData.getContext);
         checkBox.setText(featName);
         checkBox.setTextColor(sharedData.MenuStyle.getTextColor2());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
@@ -611,7 +611,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         //Credit: LoraZalora
         final List<String> lists = new LinkedList<>(Arrays.asList(list.split(",")));
 
-        final TextView textView = new TextView(sharedData.getContext);
+        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
         textView.setText(featName + ":");
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
 
@@ -621,7 +621,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         radioGroup.addView(textView);
 
         for (int i = 0; i < lists.size(); i++) {
-            final RadioButton Radioo = new RadioButton(sharedData.getContext);
+            final MaterialRadioButton Radioo = new MaterialRadioButton(sharedData.getContext);
             final String finalfeatName = featName, radioName = lists.get(i);
             View.OnClickListener first_radio_listener = new View.OnClickListener() {
                 public void onClick(View v) {
@@ -641,7 +641,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         int index = Preferences.loadPrefInt(featName, featNum);
         if (index > 0) { //Preventing it to get an index less than 1. below 1 = null = crash
             textView.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + lists.get(index - 1)));
-            ((RadioButton) radioGroup.getChildAt(index)).setChecked(true);
+            ((MaterialRadioButton) radioGroup.getChildAt(index)).setChecked(true);
         }
         linLayout.addView(radioGroup);
 
@@ -670,7 +670,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         collapseSub.setVisibility(View.GONE);
         sharedData.mCollapse = collapseSub;
 
-        final TextView textView = new TextView(sharedData.getContext);
+        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCollapseColor());
         textView.setText("▽ " + text + " ▽");
         textView.setGravity(Gravity.CENTER);
@@ -712,7 +712,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void Category(LinearLayout linLayout, String text) {
-        TextView textView = new TextView(sharedData.getContext);
+        MaterialTextView textView = new MaterialTextView(sharedData.getContext);
         textView.setBackgroundColor(sharedData.MenuStyle.getCategoryBG());
         textView.setText(Html.fromHtml(text));
         textView.setGravity(Gravity.CENTER);
@@ -728,7 +728,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void TextView(LinearLayout linLayout, String text) {
-        TextView textView = new TextView(sharedData.getContext);
+        MaterialTextView textView = new MaterialTextView(sharedData.getContext);
         textView.setText(Html.fromHtml(text));
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
         textView.setPadding(10, 5, 10, 5);
