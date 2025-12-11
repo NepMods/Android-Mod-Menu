@@ -32,10 +32,10 @@ import android.widget.Toast;
 import com.android.support.Preferences;
 import com.android.support.interfaces.IMenuBuilder;
 
-public class LGLMenu implements IMenuBuilder {
-    LGLShared sharedData;
+public class LGLMenuM3 implements IMenuBuilder {
+    LGLSharedM3 sharedData;
 
-    public LGLMenu(LGLShared shared){
+    public LGLMenuM3(LGLSharedM3 shared){
         sharedData = shared;
         Preferences.context = shared.getContext;
     }
