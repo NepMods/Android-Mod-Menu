@@ -20,13 +20,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
+
 import android.widget.Toast;
 
 import com.android.support.Preferences;
@@ -73,8 +75,8 @@ public class LGLMenuM3 implements IMenuBuilder {
         titleText.setVerticalGravity(16);
 
 
-        TextView title = buildTitle();
-        TextView subTitle = buildSubTitle();
+        MaterialTextView title = buildTitle();
+        MaterialTextView subTitle = buildSubTitle();
 
         sharedData.scrollView = new ScrollView(sharedData.getContext);
         //Auto size. To set size manually, change the width and height example 500, 500
@@ -91,8 +93,8 @@ public class LGLMenuM3 implements IMenuBuilder {
         relativeLayout.setPadding(10, 3, 10, 3);
         relativeLayout.setVerticalGravity(Gravity.CENTER);
 
-        Button hideBtn = buildHideButton();
-        Button closeBtn = buildCloseButton();
+        MaterialButton hideBtn = buildHideButton();
+        MaterialButton closeBtn = buildCloseButton();
 
         //********** Adding view components **********
         sharedData.mRootContainer.addView(sharedData.mCollapsed);
@@ -173,9 +175,9 @@ public class LGLMenuM3 implements IMenuBuilder {
         wView.setOnTouchListener(sharedData.MenuData.onTouchListener());
         return wView;
     }
-    TextView buildSettings() {
+    MaterialTextView buildSettings() {
         //********** Settings icon **********
-        TextView settings = new TextView(sharedData.getContext); //Android 5 can't show ⚙, instead show other icon instead
+        MaterialTextView settings = new MaterialTextView(sharedData.getContext); //Android 5 can't show ⚙, instead show other icon instead
         settings.setText(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? "⚙" : "\uD83D\uDD27");
         settings.setTextColor(sharedData.MenuStyle.getTextColor());
         settings.setTypeface(Typeface.DEFAULT_BOLD);
@@ -208,8 +210,8 @@ public class LGLMenuM3 implements IMenuBuilder {
     }
 
 
-    TextView buildTitle() {
-        TextView title = new TextView(sharedData.getContext);
+    MaterialTextView buildTitle() {
+        MaterialTextView title = new MaterialTextView(sharedData.getContext);
         title.setTextColor(sharedData.MenuStyle.getTextColor());
         title.setTextSize(18.0f);
         title.setGravity(Gravity.CENTER);
@@ -221,9 +223,9 @@ public class LGLMenuM3 implements IMenuBuilder {
 
 
 
-    TextView buildSubTitle() {
+    MaterialTextView buildSubTitle() {
         //********** Sub title **********
-        TextView subTitle = new TextView(sharedData.getContext);
+        MaterialTextView subTitle = new MaterialTextView(sharedData.getContext);
         subTitle.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         subTitle.setMarqueeRepeatLimit(-1);
         subTitle.setSingleLine(true);
@@ -235,11 +237,11 @@ public class LGLMenuM3 implements IMenuBuilder {
         return  subTitle;
     }
 
-    Button buildHideButton() {
+    MaterialButton buildHideButton() {
         RelativeLayout.LayoutParams lParamsHideBtn = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         lParamsHideBtn.addRule(ALIGN_PARENT_LEFT);
 
-        Button hideBtn = new Button(sharedData.getContext);
+        MaterialButton hideBtn = new MaterialButton(sharedData.getContext);
         hideBtn.setLayoutParams(lParamsHideBtn);
         hideBtn.setBackgroundColor(Color.TRANSPARENT);
         hideBtn.setText("HIDE/KILL (Hold)");
@@ -263,12 +265,12 @@ public class LGLMenuM3 implements IMenuBuilder {
         return hideBtn;
     }
 
-    Button buildCloseButton() {
+    MaterialButton buildCloseButton() {
         //********** Close button **********
         RelativeLayout.LayoutParams lParamsCloseBtn = new RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
         lParamsCloseBtn.addRule(ALIGN_PARENT_RIGHT);
 
-        Button closeBtn = new Button(sharedData.getContext);
+        MaterialButton closeBtn = new MaterialButton(sharedData.getContext);
         closeBtn.setLayoutParams(lParamsCloseBtn);
         closeBtn.setBackgroundColor(Color.TRANSPARENT);
         closeBtn.setText("MINIMIZE");
