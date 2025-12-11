@@ -3,9 +3,9 @@ package com.android.support.ThemesData.LGLM3;
 import com.android.support.interfaces.IMenuData;
 import com.android.support.interfaces.IShared;
 
-public class LGLShared extends IShared {
-    public LGLStyle MenuStyle;
-    public LGLMenuComponents components;
+public class LGLSharedM3 extends IShared {
+    public LGLStyleM3 MenuStyle;
+    public LGLMenuM3Components components;
     public IMenuData MenuData;
-    public LGLMenu menu;
+    public LGLMenuM3 menu;
 }
