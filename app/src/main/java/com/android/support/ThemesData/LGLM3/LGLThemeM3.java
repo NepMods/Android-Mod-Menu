@@ -2,6 +2,7 @@ package com.android.support.ThemesData.LGLM3;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.TextView;
 import com.google.android.material.textview.MaterialTextView;
 
 import com.android.support.Menu;
@@ -52,8 +53,9 @@ public class LGLThemeM3 implements IMenuTheme {
             }
 
             @Override
-            public void Init(Context context, MaterialTextView title, MaterialTextView subTitle) {
-                menuData.Init(context, title, subTitle);
+            public void Init(Context context, TextView title, TextView subTitle) {
+                // Кастуем на MaterialTextView, если уверены, что это безопасно
+            menuData.Init(context, (MaterialTextView) title, (MaterialTextView) subTitle);
             }
         });
         shared.menu.build();
