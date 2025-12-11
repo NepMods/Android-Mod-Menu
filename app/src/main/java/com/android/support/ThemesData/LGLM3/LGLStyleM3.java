@@ -3,7 +3,7 @@ import android.graphics.Color;
 
 import com.android.support.interfaces.IMenuStyle;
 
-public class LGLStyle extends IMenuStyle {
+public class LGLStyleM3 extends IMenuStyle {
 
     @Override
     public String getTag() {
