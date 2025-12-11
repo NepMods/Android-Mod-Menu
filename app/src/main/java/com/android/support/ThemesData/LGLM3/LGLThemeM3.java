@@ -11,15 +11,15 @@ import com.android.support.interfaces.IMenuTheme;
 
 public class LGLThemeM3 implements IMenuTheme {
     FloatingWindowManager windowManager;
-    LGLShared shared;
+    LGLSharedM3 shared;
     /**
      *
      */
     @Override
     public void Init(Context context, final IMenuData menuData) {
-        shared = new LGLShared();
+        shared = new LGLSharedM3();
         windowManager = new FloatingWindowManager(context, shared);
-        LGLMain main = new LGLMain(context, shared);
+        LGLMainM3 main = new LGLMainM3(context, shared);
         main.setData(new IMenuData() {
             @Override
             public String Icon() {
