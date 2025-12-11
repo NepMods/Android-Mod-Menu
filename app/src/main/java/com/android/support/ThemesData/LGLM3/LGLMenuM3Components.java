@@ -119,7 +119,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setGravity(Gravity.CENTER);
 
-        final MaterialTextView textView = new MaterialTextView(sharedData.getContext);
+        final TextView textView = new TextView(sharedData.getContext);
         textView.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + ((loadedProg == 0) ? min : loadedProg)));
         textView.setTextColor(sharedData.MenuStyle.getTextColor2());
 
