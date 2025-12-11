@@ -61,7 +61,7 @@ public class LGLMenuM3 implements IMenuBuilder {
         WebView wView = buildOpenIconWeb();
 
         //Build Settings
-        TextView settings = buildSettings();
+        MaterialTextView settings = buildSettings();
 
         //********** Settings **********
         sharedData.mSettings = new LinearLayout(sharedData.getContext);
