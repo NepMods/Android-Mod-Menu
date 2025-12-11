@@ -641,7 +641,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         int index = Preferences.loadPrefInt(featName, featNum);
         if (index > 0) { //Preventing it to get an index less than 1. below 1 = null = crash
             textView.setText(Html.fromHtml(featName + ": <font color='" + sharedData.MenuStyle.getNumberTxtColor() + "'>" + lists.get(index - 1)));
-            ((MaterialRadioButton) radioGroup.getChildAt(index)).setChecked(true);
+            ((RadioButton) radioGroup.getChildAt(index)).setChecked(true);
         }
         linLayout.addView(radioGroup);
 
