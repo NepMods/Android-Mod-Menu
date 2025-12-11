@@ -10,10 +10,13 @@ import com.android.support.ThemesData.DZ.DZTheme;
 import com.android.support.ThemesData.LGL.LGLMain;
 import com.android.support.ThemesData.LGL.LGLShared;
 import com.android.support.ThemesData.LGL.LGLTheme;
+import com.android.support.ThemesData.LGLM3.LGLMain;
+import com.android.support.ThemesData.LGLM3.LGLShared;
+import com.android.support.ThemesData.LGLM3.LGLThemeM3;
 import com.android.support.base.FloatingWindowManager;
 import com.android.support.interfaces.IMenuData;
 
-public class Menu extends DZTheme {
+public class Menu extends LGLThemeM3 {
     native void Init(Context context, TextView title, TextView subTitle);
 
     native String Icon();
