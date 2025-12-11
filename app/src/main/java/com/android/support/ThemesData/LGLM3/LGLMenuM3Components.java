@@ -33,8 +33,8 @@ import android.widget.Spinner;
 import android.widget.Switch;
 
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.checkbox.MaterialCheckBox;
-import com.google.android.material.radiobutton.MaterialRadioButton;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import com.android.support.Preferences;
@@ -581,7 +581,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
      */
     @Override
     public void CheckBox(LinearLayout linLayout, final int featNum, final String featName, boolean switchedOn) {
-        final MaterialCheckBox checkBox = new MaterialCheckBox(sharedData.getContext);
+        final CheckBox checkBox = new CheckBox(sharedData.getContext);
         checkBox.setText(featName);
         checkBox.setTextColor(sharedData.MenuStyle.getTextColor2());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
@@ -621,7 +621,7 @@ public class LGLMenuM3Components implements IMenuComponentFactory {
         radioGroup.addView(textView);
 
         for (int i = 0; i < lists.size(); i++) {
-            final MaterialRadioButton Radioo = new MaterialRadioButton(sharedData.getContext);
+            final RadioButton Radioo = new RadioButton(sharedData.getContext);
             final String finalfeatName = featName, radioName = lists.get(i);
             View.OnClickListener first_radio_listener = new View.OnClickListener() {
                 public void onClick(View v) {
