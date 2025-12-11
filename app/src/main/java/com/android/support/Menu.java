@@ -16,7 +16,7 @@ import com.android.support.ThemesData.LGLM3.LGLThemeM3;
 import com.android.support.base.FloatingWindowManager;
 import com.android.support.interfaces.IMenuData;
 
-public class Menu extends LGLThemeM3 {
+public class Menu extends DZTheme {
     native void Init(Context context, TextView title, TextView subTitle);
 
     native String Icon();
