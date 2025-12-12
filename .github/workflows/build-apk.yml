@@ -29,14 +29,14 @@ jobs:
         run: ./gradlew assembleDebug --warning-mode all
 
       - name: Upload Gradle Problem Report
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: gradle-problem-report-${{ matrix.build_type }}-${{ github.run_id }}
           path: build/reports/problems/
           if-no-files-found: warn
 
       - name: Upload APK
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name:
 Android-Mod-Menu-apk-debug-${{ github.run_id }}
