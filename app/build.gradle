@@ -36,5 +36,6 @@ android {
 //dependencies must be placed below 'android' brackets to get it work on AIDE
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.android.material:material:1.13.0'
+    //implementation 'com.google.android.material:material:1.13.0'
+
 }
