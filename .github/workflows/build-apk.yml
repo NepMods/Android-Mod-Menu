@@ -38,6 +38,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v6
         with:
-          name:
-Android-Mod-Menu-apk-debug-${{ github.run_id }}
+          name: Android-Mod-Menu-apk-debug-${{ github.run_id }}
           path: app/build/outputs/apk/debug/app-debug.apk
