@@ -9,7 +9,8 @@ android {
     defaultConfig {
         applicationId "com.android.support"
         minSdkVersion 21
-        targetSdkVersion 34
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 29
         versionCode 1
         versionName "4.0"
         ndk {
@@ -43,3 +44,4 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
+
