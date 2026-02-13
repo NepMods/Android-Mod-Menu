@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.support.ThemesData.DZ.DZTheme;
-import com.android.support.ThemesData.LGL.LGLMain;
-import com.android.support.ThemesData.LGL.LGLShared;
 import com.android.support.ThemesData.LGL.LGLTheme;
-import com.android.support.base.FloatingWindowManager;
+
 import com.android.support.interfaces.IMenuData;
 
 public class Menu extends LGLTheme {

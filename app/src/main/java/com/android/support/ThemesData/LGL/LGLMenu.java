@@ -52,7 +52,7 @@ public class LGLMenu implements IMenuBuilder {
 
 
         //Build the Box
-        buildTheBox();;
+        buildTheBox();
 
         //Build The Icons
         buildOpenIcon();

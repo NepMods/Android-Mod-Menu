@@ -14,12 +14,10 @@ import android.os.Build;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -31,10 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.support.Preferences;
-import com.android.support.ThemesData.LGL.LGLShared;
 import com.android.support.interfaces.IMenuBuilder;
-
-import org.w3c.dom.Text;
 
 public class DZMenu implements IMenuBuilder {
     DZShared sharedData;
@@ -59,7 +54,7 @@ public class DZMenu implements IMenuBuilder {
 
 
         //Build the Box
-        buildBox();;
+        buildBox();
 
         //Build The Icons
         buildIcon();

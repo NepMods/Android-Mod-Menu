@@ -11,8 +11,6 @@ public abstract class IMenuStyle {
     public abstract int getMenuFeatureBgColor();
     public abstract int getMenuWidth();
     public abstract int getMenuHeight();
-    public abstract int getPosX();
-    public abstract int getPosY();
 
     public abstract float getMenuCorner();
     public abstract int getIconSize();

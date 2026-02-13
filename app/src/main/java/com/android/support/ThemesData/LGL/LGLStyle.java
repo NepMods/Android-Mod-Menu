@@ -1,4 +1,5 @@
 package com.android.support.ThemesData.LGL;
+
 import android.graphics.Color;
 
 import com.android.support.interfaces.IMenuStyle;
@@ -42,16 +43,6 @@ public class LGLStyle extends IMenuStyle {
     @Override
     public int getMenuHeight() {
         return 210;
-    }
-
-    @Override
-    public int getPosX() {
-        return 0;
-    }
-
-    @Override
-    public int getPosY() {
-        return 100;
     }
 
     @Override
