@@ -1,6 +1,5 @@
 package com.android.support.interfaces;
 
-import android.content.Context;
 import android.widget.LinearLayout;
 
 public interface IMenuBuilder {

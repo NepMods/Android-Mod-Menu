@@ -52,16 +52,6 @@ public class DZStyle extends IMenuStyle {
     }
 
     @Override
-    public int getPosX() {
-        return 0; // Set default or customizable as needed
-    }
-
-    @Override
-    public int getPosY() {
-        return 0; // Set default or customizable as needed
-    }
-
-    @Override
     public float getMenuCorner() {
         return 4f;
     }

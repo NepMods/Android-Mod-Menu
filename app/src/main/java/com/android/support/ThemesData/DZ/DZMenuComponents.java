@@ -21,7 +21,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,7 +28,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -43,7 +41,6 @@ import com.android.support.interfaces.IMenuComponentFactory;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import com.android.support.interfaces.IMenuComponentFactory;
 
 public class DZMenuComponents implements IMenuComponentFactory {
 

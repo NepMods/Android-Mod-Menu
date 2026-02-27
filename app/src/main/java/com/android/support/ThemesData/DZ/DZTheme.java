@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.support.Menu;
 import com.android.support.base.FloatingWindowManager;
 import com.android.support.interfaces.IMenuData;
 import com.android.support.interfaces.IMenuTheme;
